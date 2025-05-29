@@ -2,7 +2,7 @@
 title: "Introdução à Ciência de Dados"
 subtitle: "Aula 5"
 lang: pt-BR
-author: "Seu Nome"
+author: "Edvaldo Garcia Rezende"
 date: 2025-05-08
 format: 
   html:
