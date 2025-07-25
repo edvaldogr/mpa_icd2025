@@ -1,0 +1,163 @@
+---
+title: "Reslução da Avaliação 3"
+subtitle: "Introdução à Ciência de Dados - 2025 <br> Mestrado em Administração"
+author: "Edvaldo Garcia Rezende"
+title-block-banner: "#27445C"
+format:
+  html:
+    theme: flatly
+    embed-resources: true
+    page-layout: article
+    toc: true
+    toc-location: left
+lang: pt-BR
+date: 2025-07-24
+date-format: long
+---
+
+
+```{r}
+#| label: setup
+#| echo: false
+
+# Cofigurações para exibicão de números
+options(
+  digits = 5, # número de casas decimais
+  scipen = 9999 # desativa notação científica
+)
+
+# carrega pacotes
+library(effectsize) # para medidas de tamaho do efeito
+library(pwr)        # para estimativas de poder estatístico
+```
+
+
+
+## Questão 1 
+
+[ ] Opção 1  
+[ ] Opção 2  
+[ ] Opção 3  
+[x] Opção 4
+
+
+**Justificativa:**
+
+
+
+
+**b.** 
+
+
+```{r}
+prop.test(x = c(60, 45),
+          n = c(100, 100),
+          alternative = "two.sided",
+          conf.level = 0.95,
+          correct = FALSE)
+
+```
+
+
+
+
+**c.** 
+
+
+```{r}
+# Proporções
+p1 <- 0.45
+p2 <- 0.60
+
+# Diferença padronizada
+h <- ES.h(p1, p2)
+h
+
+interpret_cohens_d(abs(h), rules = "cohen1988")
+
+```
+A diferença padronizada entre as proporções, segundo Cohen, é aproximadamente 
+0,30. De acordo com a classificação de Cohen (1988), essa diferença representa 
+um tamanho de efeito pequeno a médio (mais próximo de pequeno).
+
+
+
+
+**d.** 
+
+Com base nos resultados obtidos, a análise indicou que existe diferença 
+estatisticamente significativa entre as proporções de investidores iniciantes 
+e experientes que tomam decisões financeiras impulsivas. O intervalo de 
+confiança de 95% para a diferença entre as proporções ($P_B − P_A$) 
+não inclui zero, sugerindo que a proporção de investidores iniciantes que agem 
+impulsivamente é maior do que a de investidores experientes.
+Além disso, o cálculo do tamanho do efeito, segundo a proposta de Cohen (1988), 
+apresentou um valor de aproximadamente 0,30, o que corresponde a um efeito 
+pequeno a médio. Isso indica que, embora a diferença seja estatisticamente 
+significativa, sua relevância prática é moderada, sugerindo que o nível de 
+experiência influencia o comportamento impulsivo, mas não é o único fator 
+determinante.
+Portanto, conclui-se que investidores iniciantes tendem a apresentar uma 
+propensão ligeiramente maior para decisões impulsivas em comparação aos 
+experientes, mas a magnitude dessa diferença não é elevada. Este resultado
+reforça a importância de considerar outros fatores psicológicos, 
+comportamentais e contextuais ao analisar o comportamento financeiro.
+
+
+
+
+
+**e.** 
+
+Adotando um nível de significância de 5% ($\alpha = 0{,}05$), o valor-p 
+obtido (0,038) é menor que $\alpha$.
+Portanto, rejeitamos a hipótese nula de que as proporções de decisões 
+impulsivas são iguais nos dois grupos.
+Concluímos que há evidências estatísticas de que a proporção de decisões 
+financeiras impulsivas diferem significativamente entre investidores iniciantes
+e experientes.
+
+
+
+
+**f.** 
+
+A estimativa por intervalo de confiança costuma ser mais informativa que o 
+teste de significância, porque fornece uma faixa de valores plausíveis para 
+o parâmetro populacional (como a diferença entre proporções), além de indicar 
+a precisão da estimativa.
+Enquanto o teste de hipóteses apenas diz se o efeito é “estatisticamente 
+significativo” (com base no valor-p), o intervalo mostra quanto e com que 
+confiança as proporções podem diferir, permitindo interpretações mais 
+completas e práticas dos resultados.
+
+
+
+**g.**
+
+
+
+```{r}
+pwr.2p2n.test(h, 
+              n1 = 100, 
+              n2 = 100, 
+              sig.level = 0.05, 
+              alternative = c("two.sided", "less", "greater"))
+```
+O poder estatístico estimado é de aproximadamente 56%, ou seja, abaixo do limiar 
+recomendado de 80%. Portanto, o tamanho da amostra não é totalmente adequado 
+para garantir uma chance alta de detectar uma diferença real, caso ela exista.A
+amostra precisa ser maior.
+
+
+
+
+
+
+
+
+
+
+
+
+

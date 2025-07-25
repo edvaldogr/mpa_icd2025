@@ -1,0 +1,122 @@
+---
+title: "Reslução da Avaliação 2"
+subtitle: "Introdução à Ciência de Dados - 2025 <br> Mestrado em Administração"
+author: "Edvaldo Garcia Rezende"
+title-block-banner: "#27445C"
+format:
+  html:
+    theme: flatly
+    embed-resources: true
+    page-layout: article
+    toc: true
+    toc-location: left
+lang: pt-BR
+date: 2025-07-24
+date-format: long
+bibliography: referencias.bib
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+---
+
+
+
+
+## Resposta da Questão 1 
+
+a) Segundo @nuzzo2014, o que aconteceu é que na primeira rodagem dos dados o 
+pesquisador Motyl  ao analisar quase 2000 pessoas e calcular o valor P o 
+resultado pareceu muito  significativo, mas ao replicar o modelo novamente 
+apareceu o valor corrigido de  P = 0,59. A natureza escorregadia está no fato 
+de que dependendo da amostra (caso ela seja muito grande) este valor de P pode 
+variar muito a ponto de provocar o erro tipo I (falso positivo) que é aceitar 
+a hipótese nula, quando o correto é que ela deveria ser rejeitada. 
+Ou seja, o valor de P muito baixo pode não ser significativo para 
+grandes amostras.
+
+
+
+
+
+b) A pesquisa deve ser bastante clara e bem documentada afim de que ela possa 
+ser reproduzida, até para validação do resultado obtido. 
+
+A interpretação correta neste caso é: Como o valor P=0,59 > 0,05 (valor de 
+significância), a hipótese nula deve ser rejeitada.
+
+
+
+## Resposta da Questão 2 
+
+
+a) Os pesquisadores geralmente "forçam" os dados para confirmar as suas 
+hipóteses afim de aumentar a chance de sua publicação ser aceita. Às vezes 
+utilizam apenas dados até que o resultado alcance um valor significativamente 
+aceito. Porém esta prática pode levar cometer o erro de obter falsos positivos.
+Como forma de combater esta prática os editoriais de revistas poderiam 
+apresentar algumas pesquisas cujo resultado não foi comprovado, mas que 
+metodologicamente está correto (desde reprodutibilidade da pesquisa, múltiplos 
+testes, clareza na documentação da pesquisa afim de identificar ajustes de 
+parâmetros se necessário), pois isto também serve de contribuição para a
+Ciência. 
+
+b) P-Hacking é quando o pesquisador manipula os seus dados até obter os 
+resultados que espera confirmar. Um exemplo é escolher os valores de uma 
+amostra até atingir um valor de P significativo para confirmar a hispótese 
+que ele está testando. Outra forma é utilizar uma amostra muito enviesada 
+que certamente apresentará o resultado que ele espera alcançar. Estes são 
+exemplos que acontecem em publicações de várias áreas (Psicologia, Finanças, 
+etc.) como apresentado no artigo de @harvey2017.
+
+
+
+## Resposta da Questão 3 
+
+
+a) O valor P corresponde ao valor da probabilidade, a partir dos dados obtidos, 
+de ocorrer a condição extrema estabelecida na hipóteses alternativa desde que 
+considere que a hipótese nula seja verdadeira. Se este valor estiver acima do 
+teste de significância estabelecido, deve-se rejeitar a hipótese nula.
+
+O papel da significância estatística ocorre como forma de validar melhor 
+o teste da hipótese, porém mesmo que o valor de P seja pequeno o suficiente 
+para ser aceito, o resultado obtido pelo teste pode não ter um poder de 
+importância suficientemente bom para ser implementado.
+
+b) De acordo com @imbens2021, as três preocupações são: 
+1. O valor P pode não responder à questão de interesse do pesquisador;
+2. Se o pesquisador quer responder de fato a hipótese nula ou a hipótese 
+alternativa, escolhendo os dados para obter o que deseja.
+3. Se o valor de P for muito baixo, ele altera os dados para obter valores de P 
+favoráveis (p-haking).
+
+c) Uma forma de melhorar a interpretação e a apresentação de resultados é 
+utilizar estimativas pontuais e intervalos de confiança (ou bayesianos) no 
+lugar de teste de hipóteses com valor p. 
+
+Para reduzir incentivos ao p-hacking e ao viés de publicação poderia analisar 
+um grande número de artigos publicados e avaliar se há descontinuidade na 
+distribuição do valor P abaixo de 0,05 e acima de 0,05.
+
+d) Um plano de pré-análise apresenta como os dados serão analisados, afim de 
+detectar p-hacking. Poderia ser exigidos pelos periódicos para aprovação da 
+publicação do artigo, mas não é garantia de que um editor se comprometa a  
+publicar o artigo, mesmo que os resultados da pesquisa não tenham sido 
+alcançados e que possam estimular outros pesquisadores a analisar este assunto.
+
+
+
+
+## Referências
+
+::: {#refs}
+:::
+
+
+
+
+
+
+
+
+
+
+
